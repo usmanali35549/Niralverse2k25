@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Niralverse2k25</title>
+    <link rel="stylesheet" href="./CSS/bootstrap.css" />
+    <link rel="stylesheet" href="./CSS/custom.css" />
+    <style>
+      .event_logo {
+        width: 300px;
+        height: 200px;
+      }
+      .banner_img {
+        width: 700px;
+        height: 430px;
+      }
+      .venue {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px auto;
+        gap: 20px;
+      }
+
+      .venue_sec {
+        padding: 20px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        letter-spacing: 1.5px;
+        gap: 20px;
+        width: 250px;
+      }
+
+      .venue_sec div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .venue_sec p,
+      h1 {
+        color: #ffffff;
+        white-space: nowrap;
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      a:link,
+      a:visited,
+      .head-nav {
+        text-decoration: none;
+      }
+
+      .reg_btn {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 261px;
+        height: 53px;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: #fff;
+        text-decoration: none;
+        background-color: #201f1f;
+        text-transform: uppercase;
+        border-radius: 8px;
+        font-weight: bold;
+        position: relative;
+        overflow: hidden;
+        border: 2px solid transparent;
+        transition: all 0.4s ease;
+        cursor: pointer;
+      }
+
+      .reg_btn:before {
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        border-radius: 8px;
+        background: linear-gradient(
+          45deg,
+          #ffbf00,
+          #e6a300,
+          #ffdd33,
+          #cc6600,
+          #994c00
+        );
+        background-size: 300%;
+        z-index: -1;
+        transition: all 0.4s ease;
+        animation: animate 6s linear infinite;
+        filter: blur(8px);
+        opacity: 1;
+      }
+
+      /* Hover effect */
+      .reg_btn:hover {
+        background-color: transparent;
+        color: #201f1f;
+        border: 2px solid #ffbf00;
+        font-weight: bold;
+        box-shadow: 0 0 20px rgba(255, 191, 0, 0.7);
+      }
+
+      .reg_btn:hover:before {
+        filter: blur(0);
+        opacity: 1;
+      }
+
+      /* Animation */
+      @keyframes animate {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+      .countdown-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+        color: #fff;
+        text-align: center;
+      }
+
+      /* Title */
+      .countdown-title {
+        font-size: 25px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+      }
+
+      /* Countdown Box */
+      .countdown {
+        display: flex;
+        font-size: 40px;
+        font-weight: bold;
+        letter-spacing: 2px;
+      }
+      .countdown span {
+        display: inline;
+        font-family: "Courier New", monospace;
+        font-weight: bold;
+        text-align: center;
+        transition: all 0.3s ease;
+      }
+
+      .countdown span div {
+        font-size: 10px;
+        margin-top: 6px;
+        font-weight: normal;
+        text-transform: uppercase;
+      }
+
+      @keyframes borderRun {
+        0% {
+          border-color: transparent;
+        }
+        100% {
+          border-color: transparent;
+        }
+      }
+      @media (max-width: 768px) {
+        .event_logo {
+          width: 240px;
+          height: 160px;
+        }
+        .banner_img {
+          width: 340px;
+          height: auto;
+        }
+        .countdown-title{
+          font-size: 20px;
+        }
+      }
+      .gold {
+        width: 0.14rem;
+        height: 65px;
+        background-image: linear-gradient(rgb(0, 0, 0), #f87712, black);
+      }
+      .contBackground{
+        background-color: #201f1f;
+      }
+    </style>
+  </head>
+  <body style="background-color: #000000">
+    <div class="header-container">
+      <nav class="navbar navbar-expand-lg bg-black fixed-top">
+        <div class="container-fluid p-0">
+          <img class="ms-2" src="./IMAGES/NiralVerse2.png" alt="" style="max-width: 50px;" />
+          <img class="f-logo ms-2" src="./IMAGES/NiralVersenName.png" alt="" />
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div
+            class="offcanvas offcanvas-end bg-black text-white"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-5">
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="Events.html">Events</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#web">Websites</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#contact">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <section>
+      <div class="d-flex flex-column justify-content-center align-items-center">
+        <img src="./Images/Banner.jpg" alt="" class="banner_img mt-5" />
+        <img src="./Images/NiralVerse.jpg" alt="" class="event_logo" />
+        <p class="text-white text-center w-75 fw-bold">
+          Embrace the thrill of challenges: Where innovation meets excitement!
+        </p>
+      </div>
+      <div class="venue" id="venue">
+        <div class="venue_sec">
+          <div>
+            <h1>SCHEDULE</h1> 
+            <p>09.00AM - 3.00PM</p>
+          </div>
+        </div>
+        <span class="gold"> </span>
+        <div class="venue_sec">
+          <div>
+            <h1>DATE</h1>
+            <p>07-02-2025</p>
+          </div>
+        </div>
+      </div>
+      <div class="text-center my-5">
+        <a href="https://forms.gle/AoehCC7Y65DXw2sU8" class="reg_btn" id="reg_btn">Register </a>
+      </div>
+    </section>
+    <section class="contBackground">
+      <div class="countdown-container">
+        <div class="countdown-title">
+          Countdown to Niral Verse- 2K25 Begins:-
+        </div>
+        <div class="countdown gap-4" id="countdown">
+          <span id="days"
+            >000
+            <div>Day(s)</div></span
+          >
+          <span id="hours"
+            >00
+            <div>Hour(s)</div></span
+          >
+          <span id="minutes"
+            >00
+            <div>Minute(s)</div></span
+          >
+          <span id="seconds"
+            >00
+            <div>Second(s)</div></span
+          >
+        </div>
+      </div>
+    </section>
+    <section class="contBackground">
+      <div class="row">
+        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 aboutLogo">
+          <img src="./IMAGES/NiralVersenName.png" alt="" width="300">
+        </div>
+        <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12">
+          <h1 class="fs-2 text-center text-white">WE NIRAL VERSE </h1>
+          <p class="text-white aboutEvent"><b>Niralverse 2025: The Ultimate Tech Fest of Hindustan College of Arts and Science</b>**  
+
+            <b>Niralverse 2025</b> is the prestigious annual tech fest organized by the <b>Department of Computer Science</b> at <b>Hindustan College of Arts and Science</b>. Held every year, <b>Niralverse</b> is a highly anticipated event that unites <b>students, innovators, and tech enthusiasts</b> to explore cutting-edge ideas, showcase their expertise, and engage in exciting competitions.  
+            
+            The fest features a dynamic mix of <b>technical and creative events</b>, challenging participants to demonstrate their <b>skills, innovation, and problem-solving abilities</b>. Known for its electrifying atmosphere and top-tier competition, <b>Niralverse 2025</b> provides a <b>thrilling platform to celebrate technology, knowledge, and excellence</b>.</p>
+        </div>
+      </div>
+    </section>
+    <div class="contBackground">
+      <div class="container">
+        <div
+          class="map py-4 d-flex flex-column justify-content-center align-items-center"
+        >
+          <h3 class="lochead mb-4 text-white">Our College Location</h3>
+          <div style="border: 2px solid black; width: 100%; height: auto">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.6634251885193!2d80.22776617585552!3d12.800345718608176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5250876d5becf1%3A0xf47082ff16354174!2sHindustan%20College%20of%20Arts%20%26%20Science!5e0!3m2!1sen!2sin!4v1740232467470!5m2!1sen!2sin"
+              width="954"
+              height="256"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="container-fluid">
+      <div class="row py-4">
+        <div class="col-2"></div>
+        <div class="col-xxl-2 col-xl-2 col-lg col-md-2 col-sm-12 col-xs-12">
+          <img class="f-logo ms-2" src="./IMAGES/NiralVersenName.png" alt="" />
+        </div>
+        <div class="col-xxl-2 col-xl-2 col-lg col-md-2 col-sm-12 col-xs-12">
+          <p class="text-white mb-3 fs-5 fw-bold">Overview</p>
+          <div>
+            <a href="./main.html"><p class="ftext">About Us</p></a>
+            <a href="./Events.html"><p class="ftext">Events</p></a>
+            <a  href="https://forms.gle/AoehCC7Y65DXw2sU8" target="_blank"><p class="ftext">Register</p></a>
+          </div>
+        </div>
+        <div class="col-xxl-2 col-xl-2 col-lg col-md-2 col-sm-12 col-xs-12">
+          <p class="text-white mb-3 fs-5 fw-bold" id="web">Websites</p>
+          <div>
+            <p class="ftext">
+              <a
+                class="subContact"
+                href="https://hcaschennai.edu.in/"
+                target="_blank"
+                >HCAS - Chennai</a
+              >
+            </p>
+            <p class="ftext">
+              <a class="subContact" href="https://sunstone.in/" target="_blank"
+                >Sunstone</a
+              >
+            </p>
+          </div>
+        </div>
+        <div class="col-xxl-2 col-xl-2 col-lg col-md-2 col-sm-12 col-xs-12">
+          <p class="text-white mb-3 fs-5 fw-bold" id="contact">Contact Us</p>
+          <div class="d-flex flex-column gap-3">
+            <a class="subContact" href="mailto:niralverse25@gamil.com"
+              >niralverse25@gamil.com</a
+            >
+            <a class="subContact" href="https://wa.me/+919655650184"
+              >Mr.Gokulnath</a
+            >
+            <a class="subContact" href="https://wa.me/+919943086228"
+              >Mr.Javeed Mohamed</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./JS/bootstrap.js"></script>
+    <script src="./JS/script.js"></script>
+  </body>
+</html>

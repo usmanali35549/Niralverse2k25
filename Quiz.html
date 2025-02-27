@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IQ Clash</title>
+    <link rel="stylesheet" href="./CSS/bootstrap.css" />
+    <link rel="stylesheet" href="./CSS/custom.css" />
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      footer {
+        background-color: #000000;
+        color: #ffffff;
+        position: relative;
+        width: 100%;
+        bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header-container">
+      <nav class="navbar navbar-expand-lg bg-black fixed-top">
+        <div class="container-fluid p-0">
+          <img class="ms-2" src="./IMAGES/NiralVerse2.png" alt="" style="max-width: 50px;" />
+          <img class="f-logo ms-2" src="./IMAGES/NiralVersenName.png" alt="" />
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div
+            class="offcanvas offcanvas-end bg-black text-white"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-5">
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="index.html">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="Events.html">Events</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#web">Websites</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#contact">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="banner d-flex align-items-center justify-content-center" style="background-image: url(./IMAGES/QuizBanner.jpeg);">
+      <h1 class="mt-5 text-white" style="font-family: fantasy">
+        IQ CLASH
+      </h1>
+    </div>
+    <div style="background-color: #cacaca">
+      <div class="container">
+        <div class="row py-5">
+          <div
+          class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12"
+        >
+        <div class="image-container">
+          <img
+            src="./IMAGES/QuizPoster.jpeg"
+            alt="Poster"
+            class="poster-img"
+            onclick="toggleImage()"
+          />
+          <img
+            src="./IMAGES/Quiz Rules.jpeg"
+            alt="Rules and Regulations"
+            class="rules-img"
+            onclick="toggleImage()"
+          />
+        </div>
+          <div class="m-2 Description">
+            <p class="text-muted fs-4 mt-4">
+              The IQ Clash (Quiz) is an exciting and competitive event designed to test participant's knowledge and problem-solving skills in various technical domains.</p>
+          </div>
+        </div>
+        </div>
+          <div class="row">
+            <div class="col-12 d-flex justify-content-end gap-3 my-3">
+              <a href="TechnicalEvent.html"
+                ><button class="btn btn-primary">Back to Event</button></a
+              >
+              <a href="https://forms.gle/AoehCC7Y65DXw2sU8" target="_blank"
+                ><button class="btn btn-success">Register Now</button></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="container-fluid">
+      <div class="row py-4">
+        <div class="col-2"></div>
+        <div
+          class="col-xxl-2 col-xl-2 col-lg col-md-2 col-sm-12 col-xs-12"
+        >
+        <img class="f-logo ms-2" src="./IMAGES/NiralVersenName.png" alt="" />
+        </div>
+        <div class="col-xxl-2 col-xl-2 col-lg col-md-2 col-sm-12 col-xs-12">
+          <p class="text-white mb-3 fs-5 fw-bold">Overview</p>
+          <div class="linkC">
+            <a href="./main.html"><p class="ftext">About Us</p></a>
+            <a href="./Events.html"><p class="ftext">Events</p></a>
+            <a  href="https://forms.gle/AoehCC7Y65DXw2sU8" target="_blank"><p class="ftext">Register</p></a>
+          </div>
+        </div>
+        <div class="col-xxl-2 col-xl-2 col-lg col-md-2 col-sm-12 col-xs-12">
+          <p class="text-white mb-3 fs-5 fw-bold" id="web">Websites</p>
+          <div>
+            <p class="ftext">
+              <a
+                class="subContact"
+                href="https://hcaschennai.edu.in/"
+                target="_blank"
+                >HCAS - Chennai</a
+              >
+            </p>
+            <p class="ftext">
+              <a class="subContact" href="https://sunstone.in/" target="_blank"
+                >Sunstone</a
+              >
+            </p>
+          </div>
+        </div>
+        <div class="col-xxl-2 col-xl-2 col-lg col-md-2 col-sm-12 col-xs-12">
+          <p class="text-white mb-3 fs-5 fw-bold" id="contact">Contact Us</p>
+          <div class="d-flex flex-column gap-3">
+            <a class="subContact" href="mailto:niralverse25@gamil.com"
+              >niralverse25@gamil.com</a
+            >
+            <a class="subContact" href="https://wa.me/+918438822046"
+              >Ms.Abinaya</a
+            >
+            <a class="subContact" href="https://wa.me/+916383142301"
+              >Ms.Priyadharshini</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./JS/bootstrap.js"></script>
+    <script src="./JS/script.js"></script>
+  </body>
+</html>

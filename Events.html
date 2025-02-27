@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+    <link rel="stylesheet" href="./CSS/bootstrap.css" />
+    <link rel="stylesheet" href="./CSS/custom.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: antiquewhite;
+      }
+      .shake-hover {
+        height: 40vh;
+        width: 75%;
+        border: 2px solid white;
+        border-radius: 20px;
+        overflow: hidden;
+        transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* Shake effect on hover (large screens) */
+      @media (min-width: 976px) {
+        .shake-hover:hover {
+          transform: translateX(5px) rotate(3deg) scale(1.05);
+          opacity: 0.9;
+        }
+      }
+
+      /* Click-to-zoom for smaller screens */
+      @media (max-width: 975px) {
+        .shake-hover:active {
+          transform: scale(1.1);
+        }
+        .shake-hover {
+          height: 22vh;
+        }
+      }
+
+      /* Center images inside the container */
+      .shake-hover img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* Ensure the entire section is centered */
+      .center-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header-container">
+      <nav class="navbar navbar-expand-lg bg-black fixed-top">
+        <div class="container-fluid p-0">
+          <a href="main.html">
+            <img
+              class="ms-2"
+              src="./IMAGES/NiralVerse2.png"
+              alt=""
+              style="max-width: 50px"
+            />
+            <img
+              class="f-logo ms-2"
+              src="./IMAGES/NiralVersenName.png"
+              alt=""
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div
+            class="offcanvas offcanvas-end bg-black text-white"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-5">
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="Events.html">Events</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#web">Websites</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="#contact">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="banner mt-5" style="height: 130px">
+      <h1 class="text-center h1 lilita-one-regular">EVENTS</h1>
+    </div>
+    <div class="container">
+      <div class="row justify-content-center align-items-center text-center">
+        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+          <a
+            href="TechnicalEvent.html"
+            class="d-flex flex-column justify-content-center align-items-center"
+            ><div class="shake-hover">
+              <img src="./IMAGES/TechnicalImg.jpg" alt="Technical" /></div
+          ></a>
+          <h2 class="fw-bolder py-5">TECHNICAL</h2>
+        </div>
+        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+          <a
+            href="Non-TechnicalEvent.html"
+            class="d-flex flex-column justify-content-center align-items-center"
+            ><div class="shake-hover">
+              <img src="./IMAGES/Non-Tech.jpeg" alt="Non-Technical" /></div
+          ></a>
+          <h2 class="fw-bolder py-5">NON TECHNICAL</h2>
+        </div>
+      </div>
+    </div>
+    <hr class="text-white" />
+    <footer class="container-fluid">
+      <div class="row py-4">
+        <div class="col-2"></div>
+        <div class="col-xxl-2 col-xl-2 col-lg col-md-2 col-sm-12 col-xs-12">
+          <img class="f-logo ms-2" src="./IMAGES/NiralVersenName.png" alt="" />
+        </div>
+        <div class="col-xxl-2 col-xl-2 col-lg col-md-2 col-sm-12 col-xs-12">
+          <p class="text-white mb-3 fs-5 fw-bold">Overview</p>
+          <div>
+            <a href="./main.html" class="ftext"
+              ><p class="ftext">About Us</p></a
+            >
+            <a href="./Events.html" class="ftext"
+              ><p class="ftext">Events</p></a
+            >
+            <a
+              href="https://forms.gle/AoehCC7Y65DXw2sU8"
+              class="ftext"
+              target="_blank"
+              ><p class="ftext">Register</p></a
+            >
+          </div>
+        </div>
+        <div class="col-xxl-2 col-xl-2 col-lg col-md-2 col-sm-12 col-xs-12">
+          <p class="text-white mb-3 fs-5 fw-bold" id="web">Websites</p>
+          <div>
+            <p class="ftext">
+              <a
+                class="subContact"
+                href="https://hcaschennai.edu.in/"
+                target="_blank"
+                >HCAS - Chennai</a
+              >
+            </p>
+            <p class="ftext">
+              <a class="subContact" href="https://sunstone.in/" target="_blank"
+                >Sunstone</a
+              >
+            </p>
+          </div>
+        </div>
+        <div class="col-xxl-2 col-xl-2 col-lg col-md-2 col-sm-12 col-xs-12">
+          <p class="text-white mb-3 fs-5 fw-bold" id="contact">Contact Us</p>
+          <div class="d-flex flex-column gap-3">
+            <a class="subContact" href="mailto:niralverse25@gamil.com"
+              >niralverse25@gamil.com</a
+            >
+            <a class="subContact" href="https://wa.me/+919655650184"
+              >Mr.Gokulnath</a
+            >
+            <a class="subContact" href="https://wa.me/+919943086228"
+              >Mr.Javeed Mohamed</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./JS/bootstrap.js"></script>
+  </body>
+</html>

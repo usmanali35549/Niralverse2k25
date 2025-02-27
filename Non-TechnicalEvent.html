@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+    <link rel="stylesheet" href="./CSS/bootstrap.css" />
+    <link rel="stylesheet" href="./CSS/custom.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: black;
+        color: white;
+        line-height: 1.9;
+      }
+
+      .container {
+        padding: 50px 20px;
+      }
+
+      .image-container {
+        width: 320px;
+        height: 275px;
+        overflow: hidden;
+        border-radius: 10px;
+      }
+
+      .image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .event-section {
+        margin-bottom: 50px;
+      }
+
+      hr {
+        border-color: white;
+      }
+
+      @media (max-width: 768px) {
+        .image-container {
+          width: 230px;
+          height: 200px;
+          margin: 20px 0px;
+        }
+        .container {
+          padding: 10px 20px;
+        }
+        .event-section {
+          display: flex;
+          flex-direction: column;
+        }
+        .event-section .image-container {
+          order: -1;
+          text-align: center;
+          margin-bottom: 15px;
+        }
+        .event-section .col-xxl-9,
+        .event-section .col-xl-9,
+        .event-section .col-lg-9,
+        .event-section .col-md-12,
+        .event-section .col-sm-12,
+        .event-section .col-xs-12 {
+          text-align: left !important;
+        }
+        footer {
+          background: #000000;
+        }
+        .NTdescription {
+          width: 300px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div style="background-color: #404340">
+      <div class="header-container">
+        <nav class="navbar navbar-expand-lg bg-black fixed-top">
+          <div class="container-fluid p-0">
+            <img
+              class="ms-2"
+              src="./IMAGES/NiralVerse2.png"
+              alt=""
+              style="max-width: 50px"
+            />
+            <img
+              class="f-logo ms-2"
+              src="./IMAGES/NiralVersenName.png"
+              alt=""
+            />
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div
+              class="offcanvas offcanvas-end bg-black text-white"
+              tabindex="-1"
+              id="offcanvasNavbar"
+              aria-labelledby="offcanvasNavbarLabel"
+            >
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                <button
+                  type="button"
+                  class="btn-close btn-close-white"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-5">
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="Events.html">Events</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#web">Websites</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="#contact">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <div class="container">
+        <h1 class="fs-1 my-5 text-center lilita-one-regular">
+          Non Technical Event
+        </h1>
+
+        <!-- Event 1 -->
+        <div class="row align-items-center event-section">
+          <div
+            class="col-xxl-9 col-xl-9 col-lg-9 col-md-12 col-sm-12 col-xs-12"
+          >
+            <h2>EEEE...Memes</h2>
+            <p class="NTdescription">
+              Unleash your inner comedian and showcase your creativity in our
+              Meme Competition! Whether it's witty, relatable, or just downright
+              hilarious, we want to see your best memes.
+            </p>
+            <a href="./Memes.html"
+              ><button class="btn btn-primary">View More</button></a
+            >
+          </div>
+          <div
+            class="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12 d-flex justify-content-lg-end justify-content-center"
+          >
+            <div class="image-container">
+              <img src="./IMAGES/T-Memes.jpg" alt="Event Image" />
+            </div>
+          </div>
+        </div>
+        <hr />
+
+        <!-- Event 2 -->
+        <div class="row align-items-center event-section">
+          <div
+            class="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12 d-flex justify-content-lg-start justify-content-center"
+          >
+            <div class="image-container">
+              <img src="./IMAGES/T-MAGIC WITH PENCIL.png" alt="Event Image" />
+            </div>
+          </div>
+          <div
+            class="col-xxl-9 col-xl-9 col-lg-9 col-md-12 col-sm-12 col-xs-12 d-flex flex-column align-items-end"
+          >
+            <h2>Magic With Pencil</h2>
+            <p class="NTdescription text-end">
+              A drawing that aims to replicate the subject matter with high
+              accuracy and detail, often resembling a photograph.
+            </p>
+            <a href="./MagicPencil.html"
+              ><button class="btn btn-primary">View More</button></a
+            >
+          </div>
+        </div>
+        <hr />
+
+        <!-- Event 3 -->
+        <div class="row align-items-center event-section">
+          <div
+            class="col-xxl-9 col-xl-9 col-lg-9 col-md-12 col-sm-12 col-xs-12"
+          >
+            <h2>Adzap</h2>
+            <p class="NTdescription">
+              Adzap is a fun and creative event where teams showcase their
+              advertising skills by presenting an innovative and engaging ad
+              within a limited time.
+            </p>
+            <a href="Adzap.html"
+              ><button class="btn btn-primary">View More</button></a
+            >
+          </div>
+          <div
+            class="col-xxl-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12 d-flex justify-content-lg-end justify-content-center"
+          >
+            <div class="image-container">
+              <img src="./IMAGES/T-Adzap.jpg" alt="Event Image" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="container-fluid">
+      <div class="row py-4">
+        <div class="col-2"></div>
+        <div class="col-xxl-2 col-xl-2 col-lg col-md-2 col-sm-12 col-xs-12">
+          <img class="f-logo ms-2" src="./IMAGES/NiralVersenName.png" alt="" />
+        </div>
+        <div class="col-xxl-2 col-xl-2 col-lg col-md-2 col-sm-12 col-xs-12">
+          <p class="text-white mb-3 fs-5 fw-bold">Overview</p>
+          <div>
+            <a href="./main.html" class="ftext"><p >About Us</p></a>
+            <a href="./Events.html" class="ftext"><p>Events</p></a>
+            <a  href="https://forms.gle/AoehCC7Y65DXw2sU8" target="_blank" class="ftext"><p >Register</p></a>
+          </div>
+        </div>
+        <div class="col-xxl-2 col-xl-2 col-lg col-md-2 col-sm-12 col-xs-12">
+          <p class="text-white mb-3 fs-5 fw-bold" id="web">Websites</p>
+          <div>
+            <p class="ftext">
+              <a
+                class="subContact"
+                href="https://hcaschennai.edu.in/"
+                target="_blank"
+                >HCAS - Chennai</a
+              >
+            </p>
+            <p class="ftext">
+              <a class="subContact" href="https://sunstone.in/" target="_blank"
+                >Sunstone</a
+              >
+            </p>
+          </div>
+        </div>
+        <div class="col-xxl-2 col-xl-2 col-lg col-md-2 col-sm-12 col-xs-12">
+          <p class="text-white mb-3 fs-5 fw-bold" id="contact">Contact Us</p>
+          <div class="d-flex flex-column gap-3">
+            <a class="subContact" href="mailto:niralverse25@gamil.com"
+              >niralverse25@gamil.com</a
+            >
+            <a class="subContact" href="https://wa.me/+919655650184"
+              >Mr.Gokulnath</a
+            >
+            <a class="subContact" href="https://wa.me/+919943086228"
+              >Mr.Javeed Mohamed</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./JS/bootstrap.js"></script>
+  </body>
+</html>
